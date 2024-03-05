@@ -1,6 +1,6 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NewsPage from './components/NewsPage';
 import Categories from './components/Categories';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const categories = [
   { name: 'all', text: '전체보기' },
@@ -10,16 +10,15 @@ const categories = [
   { name: 'science', text: '과학' },
   { name: 'sports', text: '스포츠' },
   { name: 'technology', text: '기술' },
-]
-
-function App() {
+];
+const App = () => {
   return (
-   <BrowserRouter>
-   <Categories categories={categories} />
-   <Routes>
-    <Route path="*" element={<NewsPage></NewsPage>} />
-   </Routes>
-   </BrowserRouter>
+    <BrowserRouter>
+      <Categories categories={categories} />
+      <Routes>
+        <Route path="*" element={<NewsPage></NewsPage>} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -1,13 +1,12 @@
 import styles from './NewsItem.module.css';
 
-const NewsItem = (props) => 
-{
-    return (
-        <div className={styles.block}>
-             <div className={styles.thumbnail}>
+const NewsItem = (props) => {
+  return (
+    <div className={styles.block}>
+      <div className={styles.thumbnail}>
         <a href={props.article.url} target="_blank">
-          <img src={props.article.urlToImage}
-            alt="thumbnail" />
+          <img src={props.article.urlToImage} 
+               alt="thumbnail" />
         </a>
       </div>
       <div className={styles.contents}>
@@ -16,8 +15,8 @@ const NewsItem = (props) =>
         </h2>
         <p>{props.article.description}</p>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default NewsItem;
